@@ -280,15 +280,16 @@ body {
     padding: 1rem;
 }
 
-.box {
+/* .box {
     padding: 1rem;
     background-color: white;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     min-height: 100vh;
-}
+} */
 
 
+/* DASHBOARD */
 .overview {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -352,19 +353,26 @@ body {
     height: 40vh;
 }
 
+/* DASHBOARD */
+
 
 /* CONTENTS */
 
 
+
+/* SHOP */
 .content-shop {
     display: flex;
     align-items: center;
-    padding: 20px;
+    /* padding: 20px; */
 }
 
 .filter-bar {
     text-align: center;
-    margin-bottom: 30px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .filter-bar input {
@@ -375,17 +383,22 @@ body {
 }
 
 .product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
     gap: 20px;
+    flex-wrap: wrap;
+
 }
 
 .product-card {
     background: #fff;
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     transition: 0.3s;
+    width: 280px;
+    height: 320px;
 }
 
 .product-card:hover {
@@ -412,4 +425,358 @@ body {
     font-size: 16px;
     color: #444;
     font-weight: bold;
+    margin-bottom: 10px;
 }
+
+.view-btn {
+    background-color: var(--cocoa);
+    color: var(--yellow);
+    border: 2px solid black;
+    font-size: 15px;
+    padding: 5px 10px;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+/* ORDERS */
+.orders-container {
+    margin-top: 20px;
+    width: 100%;
+    padding: 20px;
+}
+
+.orders-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.orders-header input,
+.orders-header select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: 280px;
+}
+
+.orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.orders-table th,
+.orders-table td {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.orders-table th {
+    background-color: var(--bg-cocoa);
+    color: var(--yellow);
+    font-weight: 600;
+}
+
+.orders-table tr:last-child td {
+    border-bottom: none;
+}
+
+.orders-table .view-btn {
+    background-color: var(--cocoa);
+    color: var(--yellow);
+    border: 2px solid black;
+    font-size: 14px;
+    padding: 5px 12px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.status {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: 500;
+    text-transform: capitalize;
+    font-size: 14px;
+}
+
+.status.pending {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.status.completed {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.status.processing {
+    background-color: #cce5ff;
+    color: #004085;
+}
+
+.status.shipped {
+    background-color: #e2e3e5;
+    color: #383d41;
+}
+
+.status.cancelled {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* ORDERS */
+
+/* PAYMENT METHOD */
+.payment-form {
+    width: 100%;
+    padding: 0 20px;
+    border-radius: 0;
+    box-shadow: none;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.payment-form .form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.payment-form label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: var(--cocoa);
+    font-size: 16px;
+}
+
+.payment-form input[type="text"],
+.payment-form input[type="file"] {
+    padding: 14px 16px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.qr-preview {
+    margin-top: 10px;
+    max-width: 100%;
+    display: flex;
+    justify-content: start;
+}
+
+.qr-preview img {
+    max-width: 200px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    object-fit: cover;
+}
+
+.save-btn {
+    align-self: flex-start;
+    background-color: var(--cocoa);
+    color: var(--yellow);
+    border: 2px solid black;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 40px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+
+/* PAYMENT METHOD */
+
+/* SHOP */
+
+/* INBOX */
+.contact-table-container {
+    margin-top: 20px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.contact-table-container input[type="text"] {
+    padding: 12px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.contact-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.contact-table th,
+.contact-table td {
+    text-align: left;
+    padding: 14px 20px;
+    font-size: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.contact-table th {
+    background-color: var(--cocoa);
+    color: var(--yellow);
+    font-weight: bold;
+}
+
+.contact-table tr:last-child td {
+    border-bottom: none;
+}
+
+.contact-table td button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-right: 8px;
+    color: var(--cocoa);
+}
+
+.contact-table td button:hover {
+    color: var(--yellow);
+}
+
+/* INBOX */
+
+/* FEEDBACK */
+.feedback-filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.feedback-filter-bar input[type="text"],
+.feedback-filter-bar select {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.feedback-filter-bar input[type="text"] {
+    flex: 1;
+    min-width: 250px;
+}
+
+.feedback-filter-bar select {
+    width: 180px;
+}
+
+.feedback-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.feedback-table th,
+.feedback-table td {
+    text-align: left;
+    padding: 14px 20px;
+    font-size: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.feedback-table th {
+    background-color: var(--cocoa);
+    color: var(--yellow);
+    font-weight: bold;
+}
+
+.feedback-table td button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: var(--cocoa);
+}
+
+.feedback-table td button:hover {
+    color: var(--yellow);
+}
+
+.feedback-table td.feedback-message {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.feedback-message .short-msg {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 180px;
+    display: inline-block;
+}
+
+.view-more {
+    background: none;
+    border: none;
+    color: var(--cocoa);
+    font-size: 18px;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.view-more:hover {
+    color: var(--yellow);
+}
+
+/* Modal Styling */
+.feedback-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.feedback-modal .modal-content {
+    background: #fff;
+    padding: 30px;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 12px;
+    position: relative;
+    text-align: left;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.feedback-modal .close-modal {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* FEEDBACK */

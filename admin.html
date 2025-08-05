@@ -170,7 +170,7 @@
 
     <!-- OVERALL CONTENTS -->
     <div class="main-content">
-      <!-- DASHBOARD -->
+      <!-- DASHBOARD TAB -->
       <div class="box" id="overview-content" style="display: none">
         <h1>Dashboard Overview</h1>
 
@@ -187,9 +187,11 @@
       <div class="box" id="inventory-content" style="display: none">
         <h1>Inventory</h1>
       </div>
-      <!-- DASHBOARD -->
 
-      <!-- SHOP -->
+      <!-- DASHBOARD TAB -->
+
+      <!-- SHOP TAB -->
+      <!-- PRODUCTS -->
       <div class="box content-shop" id="products-content" style="display: none">
         <h1>Products Management</h1>
 
@@ -199,96 +201,357 @@
             id="productSearch"
             placeholder="Search product by name..."
           />
+
+          <select id="categoryFilter">
+            <option value="all">All Categories</option>
+            <option value="cheese">Cheese</option>
+            <option value="ice-cream">Ice Cream</option>
+            <option value="snack">Salad</option>
+          </select>
+
+          <h2>Total Products: 100</h2>
         </div>
 
+        <!-- PRODUCTS -->
         <div class="product-grid" id="productGrid">
-          <!-- Sample Products -->
+          <!-- Product -->
           <div class="product-card" data-name="Classic Kesong Puti">
-            <img
-              src="https://via.placeholder.com/300x180?text=Kesong+Puti"
-              alt="Product 1"
-            />
+            <img src="assets/kesong puti.png" alt="Product 1" />
             <div class="product-info">
               <h3>Classic Kesong Puti</h3>
               <p>₱120</p>
+              <button class="view-btn">View Details</button>
             </div>
           </div>
 
-          <div class="product-card" data-name="Organic Kesong Puti">
-            <img
-              src="https://via.placeholder.com/300x180?text=Organic"
-              alt="Product 2"
-            />
+          <div class="product-card" data-name="Classic Kesong Puti">
+            <img src="assets/kesong puti.png" alt="Product 1" />
             <div class="product-info">
-              <h3>Organic Kesong Puti</h3>
-              <p>₱150</p>
+              <h3>Classic Kesong Puti</h3>
+              <p>₱120</p>
+              <button class="view-btn">View Details</button>
             </div>
           </div>
 
-          <div class="product-card" data-name="Smoked Kesong Puti">
-            <img
-              src="https://via.placeholder.com/300x180?text=Smoked"
-              alt="Product 3"
-            />
+          <div class="product-card" data-name="Classic Kesong Puti">
+            <img src="assets/kesong puti.png" alt="Product 1" />
             <div class="product-info">
-              <h3>Smoked Kesong Puti</h3>
-              <p>₱180</p>
+              <h3>Classic Kesong Puti</h3>
+              <p>₱120</p>
+              <button class="view-btn">View Details</button>
             </div>
           </div>
 
-          <div class="product-card" data-name="Low-fat Kesong Puti">
-            <img
-              src="https://via.placeholder.com/300x180?text=Low-Fat"
-              alt="Product 4"
-            />
+          <div class="product-card" data-name="Classic Kesong Puti">
+            <img src="assets/kesong puti.png" alt="Product 1" />
             <div class="product-info">
-              <h3>Low-fat Kesong Puti</h3>
-              <p>₱130</p>
+              <h3>Classic Kesong Puti</h3>
+              <p>₱120</p>
+              <button class="view-btn">View Details</button>
             </div>
           </div>
 
-          <div class="product-card" data-name="Low-fat Kesong Puti">
-            <img
-              src="https://via.placeholder.com/300x180?text=Low-Fat"
-              alt="Product 4"
-            />
+          <div class="product-card" data-name="Classic Kesong Puti">
+            <img src="assets/kesong puti.png" alt="Product 1" />
             <div class="product-info">
-              <h3>Low-fat Kesong Puti</h3>
-              <p>₱130</p>
+              <h3>Classic Kesong Puti</h3>
+              <p>₱120</p>
+              <button class="view-btn">View Details</button>
             </div>
           </div>
 
-          <div class="product-card" data-name="Low-fat Kesong Puti">
-            <img
-              src="https://via.placeholder.com/300x180?text=Low-Fat"
-              alt="Product 4"
-            />
+          <div class="product-card" data-name="Classic Kesong Puti">
+            <img src="assets/kesong puti.png" alt="Product 1" />
             <div class="product-info">
-              <h3>Low-fat Kesong Puti</h3>
-              <p>₱130</p>
+              <h3>Classic Kesong Puti</h3>
+              <p>₱120</p>
+              <button class="view-btn">View Details</button>
             </div>
           </div>
 
-          <!-- Add more products as needed -->
+          <div class="product-card" data-name="Classic Kesong Puti">
+            <img src="assets/kesong puti.png" alt="Product 1" />
+            <div class="product-info">
+              <h3>Classic Kesong Puti</h3>
+              <p>₱120</p>
+              <button class="view-btn">View Details</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-name="Classic Kesong Puti">
+            <img src="assets/kesong puti.png" alt="Product 1" />
+            <div class="product-info">
+              <h3>Classic Kesong Puti</h3>
+              <p>₱120</p>
+              <button class="view-btn">View Details</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-name="Classic Kesong Puti">
+            <img src="assets/kesong puti.png" alt="Product 1" />
+            <div class="product-info">
+              <h3>Classic Kesong Puti</h3>
+              <p>₱120</p>
+              <button class="view-btn">View Details</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-name="Classic Kesong Puti">
+            <img src="assets/kesong puti.png" alt="Product 1" />
+            <div class="product-info">
+              <h3>Classic Kesong Puti</h3>
+              <p>₱120</p>
+              <button class="view-btn">View Details</button>
+            </div>
+          </div>
         </div>
+        <!-- PRODUCTS -->
       </div>
+
+      <!-- ORDERS -->
       <div class="box" id="orders-content" style="display: none">
         <h1>Orders Overview</h1>
+
+        <div class="orders-container">
+          <div class="orders-header">
+            <input
+              type="text"
+              id="orderSearch"
+              placeholder="Search by customer or order ID..."
+            />
+            <select id="orderStatusFilter">
+              <option value="all">All Status</option>
+              <option value="pending">Pending</option>
+              <option value="processing">Processing</option>
+              <option value="shipped">Shipped</option>
+              <option value="completed">Completed</option>
+              <option value="cancelled">Cancelled</option>
+            </select>
+            <select id="orderTypeFilter">
+              <option value="all">All Types</option>
+              <option value="pickup">Pickup</option>
+              <option value="delivery">Delivery</option>
+            </select>
+          </div>
+
+          <table class="orders-table">
+            <thead>
+              <tr>
+                <th>Order ID</th>
+                <th>Customer</th>
+                <th>Date</th>
+                <th>Status</th>
+                <th>Type</th>
+                <th>Total</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="ordersTableBody">
+              <tr data-status="pending" data-type="pickup">
+                <td>#00123</td>
+                <td>Juan Dela Cruz</td>
+                <td>Aug 04, 2025</td>
+                <td><span class="status pending">Pending</span></td>
+                <td><span class="type-label pickup">Pickup</span></td>
+                <td>₱360</td>
+                <td><button class="view-btn">View</button></td>
+              </tr>
+              <tr data-status="completed" data-type="delivery">
+                <td>#00124</td>
+                <td>Maria Santos</td>
+                <td>Aug 03, 2025</td>
+                <td><span class="status completed">Completed</span></td>
+                <td><span class="type-label delivery">Delivery</span></td>
+                <td>₱540</td>
+                <td><button class="view-btn">View</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
+
+      <!-- PAYMENT METHODS -->
       <div class="box" id="payment-content" style="display: none">
         <h1>Payment Methods</h1>
+
+        <div class="payment-form">
+          <div class="form-group">
+            <label for="gcashName">GCash Account Name</label>
+            <input
+              type="text"
+              id="gcashName"
+              placeholder="Enter GCash account name"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="gcashNumber">GCash Number</label>
+            <input type="text" id="gcashNumber" placeholder="09XXXXXXXXX" />
+          </div>
+
+          <div class="form-group">
+            <label for="qrUpload">Upload QR Code</label>
+            <input type="file" id="qrUpload" accept="image/*" />
+            <div class="qr-preview">
+              <img
+                id="qrPreviewImage"
+                src="assets/sample-qr.png"
+                alt="QR Preview"
+              />
+            </div>
+          </div>
+
+          <button class="save-btn" onclick="savePaymentMethod()">
+            Save Changes
+          </button>
+        </div>
       </div>
-      <!-- SHOP -->
+      <!-- SHOP TAB -->
 
       <!-- INBOX -->
       <div class="box" id="inbox-content" style="display: none">
         <h1>Inbox Messages</h1>
+
+        <div class="contact-table-container">
+          <input
+            type="text"
+            id="contactSearch"
+            placeholder="Search by name or email..."
+          />
+
+          <table class="contact-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Contact No.</th>
+                <th>Message</th>
+                <th>Date</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="contactTableBody">
+              <tr>
+                <td>Juan Dela Cruz</td>
+                <td>juan@example.com</td>
+                <td>09123456789</td>
+                <td>Do you ship nationwide?</td>
+                <td>Aug 5, 2025</td>
+                <td>
+                  <button class="view-btn">
+                    <i class="bi bi-eye-fill"></i>
+                  </button>
+                  <button class="delete-btn">
+                    <i class="bi bi-trash-fill"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>Maria Santos</td>
+                <td>maria.s@example.com</td>
+                <td>09123456789</td>
+                <td>I love your product!</td>
+                <td>Aug 3, 2025</td>
+                <td>
+                  <button class="view-btn">
+                    <i class="bi bi-eye-fill"></i>
+                  </button>
+                  <button class="delete-btn">
+                    <i class="bi bi-trash-fill"></i>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
       <!-- INBOX -->
 
       <!-- FEEDBACK -->
       <div class="box" id="feedback-content" style="display: none">
         <h1>Feedbacks</h1>
+
+        <div class="feedback-filter-bar">
+          <input
+            type="text"
+            id="feedbackSearch"
+            placeholder="Search by name, email, or message..."
+          />
+          <select id="ratingFilter">
+            <option value="all">All Ratings</option>
+            <option value="5">⭐⭐⭐⭐⭐</option>
+            <option value="4">⭐⭐⭐⭐</option>
+            <option value="3">⭐⭐⭐</option>
+            <option value="2">⭐⭐</option>
+            <option value="1">⭐</option>
+          </select>
+        </div>
+
+        <table class="feedback-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Rating</th>
+              <th>Message</th>
+              <th>Date</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="feedbackTableBody">
+            <tr>
+              <td>Juan Dela Cruz</td>
+              <td>juan@example.com</td>
+              <td>⭐⭐⭐⭐⭐</td>
+              <td class="feedback-message">
+                <span class="short-msg">The product quality is amazing!</span>
+                <button
+                  class="view-btn view-more"
+                  data-message="The product quality is amazing! Will definitely order again. Fast delivery and well-packaged."
+                  title="View More"
+                >
+                  <i class="bi bi-eye-fill"></i>
+                </button>
+              </td>
+              <td>2025-08-05</td>
+              <td>
+                <button class="delete-btn">
+                  <i class="bi bi-trash-fill"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Maria Santos</td>
+              <td>maria.s@example.com</td>
+              <td>⭐⭐⭐</td>
+              <td class="feedback-message">
+                <span class="short-msg">It was okay.</span>
+                <button
+                  class="view-btn view-more"
+                  data-message="It was okay, but packaging could be better. I hope to see improvements next time."
+                  title="View More"
+                >
+                  <i class="bi bi-eye-fill"></i>
+                </button>
+              </td>
+              <td>2025-08-03</td>
+              <td>
+                <button class="delete-btn">
+                  <i class="bi bi-trash-fill"></i>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- MODAL for full message -->
+        <div class="feedback-modal" id="feedbackModal">
+          <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Full Message</h2>
+            <p id="fullMessageText"></p>
+          </div>
+        </div>
       </div>
       <!-- FEEDBACK -->
 
@@ -387,6 +650,125 @@
           e.preventDefault();
           alert("You have been logged out."); // Replace with real logout logic later
         });
+    </script>
+
+    <script>
+      const orderSearch = document.getElementById("orderSearch");
+      const orderStatusFilter = document.getElementById("orderStatusFilter");
+      const orderRows = document.querySelectorAll("#ordersTableBody tr");
+
+      function filterOrders() {
+        const searchTerm = orderSearch.value.toLowerCase();
+        const selectedStatus = orderStatusFilter.value;
+
+        orderRows.forEach((row) => {
+          const customerName = row.children[1].textContent.toLowerCase();
+          const orderId = row.children[0].textContent.toLowerCase();
+          const status = row.getAttribute("data-status");
+
+          const matchesSearch =
+            customerName.includes(searchTerm) || orderId.includes(searchTerm);
+          const matchesStatus =
+            selectedStatus === "all" || status === selectedStatus;
+
+          row.style.display = matchesSearch && matchesStatus ? "" : "none";
+        });
+      }
+
+      orderSearch.addEventListener("input", filterOrders);
+      orderStatusFilter.addEventListener("change", filterOrders);
+    </script>
+
+    <script>
+      const qrUpload = document.getElementById("qrUpload");
+      const qrPreview = document.getElementById("qrPreviewImage");
+
+      qrUpload.addEventListener("change", function () {
+        const file = qrUpload.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            qrPreview.src = e.target.result;
+          };
+          reader.readAsDataURL(file);
+        }
+      });
+
+      function savePaymentMethod() {
+        const gcashName = document.getElementById("gcashName").value.trim();
+        const gcashNumber = document.getElementById("gcashNumber").value.trim();
+
+        if (!gcashName || !gcashNumber) {
+          alert("Please fill out all fields.");
+          return;
+        }
+
+        // Simulate save process (replace with backend call later)
+        alert("GCash payment method has been saved successfully!");
+      }
+    </script>
+
+    <script>
+      const contactSearch = document.getElementById("contactSearch");
+      const contactRows = document.querySelectorAll("#contactTableBody tr");
+
+      contactSearch.addEventListener("input", () => {
+        const term = contactSearch.value.toLowerCase();
+
+        contactRows.forEach((row) => {
+          const name = row.children[0].textContent.toLowerCase();
+          const email = row.children[1].textContent.toLowerCase();
+          row.style.display =
+            name.includes(term) || email.includes(term) ? "" : "none";
+        });
+      });
+    </script>
+
+    <script>
+      const feedbackSearch = document.getElementById("feedbackSearch");
+      const ratingFilter = document.getElementById("ratingFilter");
+      const feedbackRows = document.querySelectorAll("#feedbackTableBody tr");
+
+      const modal = document.getElementById("feedbackModal");
+      const fullMessageText = document.getElementById("fullMessageText");
+      const closeModalBtn = document.querySelector(".close-modal");
+
+      function filterFeedback() {
+        const searchTerm = feedbackSearch.value.toLowerCase();
+        const selectedRating = ratingFilter.value;
+
+        feedbackRows.forEach((row) => {
+          const name = row.children[0].textContent.toLowerCase();
+          const email = row.children[1].textContent.toLowerCase();
+          const message = row.children[3].textContent.toLowerCase();
+          const rating = row.children[2].textContent.length;
+
+          const matchesSearch =
+            name.includes(searchTerm) ||
+            email.includes(searchTerm) ||
+            message.includes(searchTerm);
+          const matchesRating =
+            selectedRating === "all" || rating == selectedRating;
+
+          row.style.display = matchesSearch && matchesRating ? "" : "none";
+        });
+      }
+
+      feedbackSearch.addEventListener("input", filterFeedback);
+      ratingFilter.addEventListener("change", filterFeedback);
+
+      // View More modal
+      document.querySelectorAll(".view-more").forEach((button) => {
+        button.addEventListener("click", () => {
+          fullMessageText.textContent = button.getAttribute("data-message");
+          modal.style.display = "flex";
+        });
+      });
+
+      closeModalBtn.onclick = () => (modal.style.display = "none");
+      window.onclick = (e) => {
+        if (e.target === modal) modal.style.display = "none";
+      };
     </script>
   </body>
 </html>
