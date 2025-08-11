@@ -118,19 +118,18 @@ if (isset($_POST['set_password'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Forgot Password | Kesong Puti</title>
     <link rel="stylesheet" href="forgot.css" />
-    <link rel="icon" href="assets/NU logo.png" type="image/x-icon" />
 </head>
 <body>
 <header class="logo-container">
     <a href="login.php">
-        <img src="assets/NU logo.png" alt="NU Laguna Logo"/>
+        <img src="assets/logo.png" alt="NU Laguna Logo"/>
     </a>
-    <h1 class="schoolname"><a href="login.php">NU LAGUNA</a></h1>
+    
 </header>
 <main>
     <section class="form-section">
         <div class="title-container">
-            <h1>DOCSORT</h1>
+            <h1>KESONG PUTI</h1>
             <p>
                 Please enter your registered email. We will send an OTP to your email so you can reset your password.
             </p>

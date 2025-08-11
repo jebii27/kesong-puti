@@ -1,3 +1,20 @@
+
+<?php
+require '../../connection.php'; 
+
+// Check if the user is logged in as super admin
+if (!isset($_SESSION['username']) || !isset($_SESSION['role']) || $_SESSION['role'] !== 'superadmin') {
+    header('Location: ../../login.php');
+    exit();
+    
+    
+}
+// else{
+//         header('Location: admin.html');
+//     }
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,7 +27,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
     />
-    <link rel="stylesheet" href="css/admin.css" />
+    <link rel="stylesheet" href="../../css/admin.css" />
   </head>
 
   <body>
@@ -24,7 +41,7 @@
       </div>
 
       <div class="user">
-        <img src="assets/logo.png" alt="admin" class="profile-img" />
+        <img src="../../assets/logo.png" alt="admin" class="profile-img" />
         <div>
           <p class="name">Arlene Macalinao</p>
           <p class="type">Super Admin</p>
@@ -84,6 +101,19 @@
               </li>
             </ul>
           </li>
+
+          <!-- CREATE ADMIN -->
+          <li>
+            <a
+              href="create-admin.php"
+              class="main-tab single-tab"
+              data-content="create-admin-content"
+            >
+              <i class="bi bi-envelope-fill"></i>
+              <span class="nav-item">Create Admin</span>
+            </a>
+          </li>
+          <!-- CREATE ADMIN -->
 
           <!-- INBOX -->
           <li>
@@ -216,7 +246,7 @@
         <div class="product-grid" id="productGrid">
           <!-- Product -->
           <div class="product-card" data-name="Classic Kesong Puti">
-            <img src="assets/kesong puti.png" alt="Product 1" />
+            <img src="../assets/kesong puti.png" alt="Product 1" />
             <div class="product-info">
               <h3>Classic Kesong Puti</h3>
               <p>₱120</p>
@@ -225,7 +255,7 @@
           </div>
 
           <div class="product-card" data-name="Classic Kesong Puti">
-            <img src="assets/kesong puti.png" alt="Product 1" />
+            <img src="../assets/kesong puti.png" alt="Product 1" />
             <div class="product-info">
               <h3>Classic Kesong Puti</h3>
               <p>₱120</p>
@@ -234,7 +264,7 @@
           </div>
 
           <div class="product-card" data-name="Classic Kesong Puti">
-            <img src="assets/kesong puti.png" alt="Product 1" />
+            <img src="../assets/kesong puti.png" alt="Product 1" />
             <div class="product-info">
               <h3>Classic Kesong Puti</h3>
               <p>₱120</p>
@@ -243,7 +273,7 @@
           </div>
 
           <div class="product-card" data-name="Classic Kesong Puti">
-            <img src="assets/kesong puti.png" alt="Product 1" />
+            <img src="../assets/kesong puti.png" alt="Product 1" />
             <div class="product-info">
               <h3>Classic Kesong Puti</h3>
               <p>₱120</p>
@@ -252,7 +282,7 @@
           </div>
 
           <div class="product-card" data-name="Classic Kesong Puti">
-            <img src="assets/kesong puti.png" alt="Product 1" />
+            <img src="../assets/kesong puti.png" alt="Product 1" />
             <div class="product-info">
               <h3>Classic Kesong Puti</h3>
               <p>₱120</p>
@@ -261,7 +291,7 @@
           </div>
 
           <div class="product-card" data-name="Classic Kesong Puti">
-            <img src="assets/kesong puti.png" alt="Product 1" />
+            <img src="../assets/kesong puti.png" alt="Product 1" />
             <div class="product-info">
               <h3>Classic Kesong Puti</h3>
               <p>₱120</p>
@@ -270,7 +300,7 @@
           </div>
 
           <div class="product-card" data-name="Classic Kesong Puti">
-            <img src="assets/kesong puti.png" alt="Product 1" />
+            <img src="../assets/kesong puti.png" alt="Product 1" />
             <div class="product-info">
               <h3>Classic Kesong Puti</h3>
               <p>₱120</p>
@@ -279,7 +309,7 @@
           </div>
 
           <div class="product-card" data-name="Classic Kesong Puti">
-            <img src="assets/kesong puti.png" alt="Product 1" />
+            <img src="../assets/kesong puti.png" alt="Product 1" />
             <div class="product-info">
               <h3>Classic Kesong Puti</h3>
               <p>₱120</p>
@@ -288,7 +318,7 @@
           </div>
 
           <div class="product-card" data-name="Classic Kesong Puti">
-            <img src="assets/kesong puti.png" alt="Product 1" />
+            <img src="../assets/kesong puti.png" alt="Product 1" />
             <div class="product-info">
               <h3>Classic Kesong Puti</h3>
               <p>₱120</p>
@@ -297,7 +327,7 @@
           </div>
 
           <div class="product-card" data-name="Classic Kesong Puti">
-            <img src="assets/kesong puti.png" alt="Product 1" />
+            <img src="../assets/kesong puti.png" alt="Product 1" />
             <div class="product-info">
               <h3>Classic Kesong Puti</h3>
               <p>₱120</p>
@@ -407,6 +437,32 @@
         </div>
       </div>
       <!-- SHOP TAB -->
+
+      <!-- CREATE ADMIN -->
+      <div class="box" id="create-admin-content" style="display: none">
+        <h1>Create Admin</h1>
+
+        <div class="form-group">
+          <label for="adminName">Name</label>
+          <input type="text" id="adminName" placeholder="Enter admin username" />
+        </div>
+
+        <div class="form-group">
+          <label for="adminEmail">Email</label>
+          <input type="email" id="adminEmail" placeholder="Enter admin email" />
+        </div>
+
+        <div class="form-group">
+          <label for="adminPassword">Password</label>
+          <input type="password" id="adminPassword" placeholder="Enter admin password" />
+        </div>
+
+        <button class="save-btn" onclick="createAdmin()">
+          Create Admin
+        </button>
+      </div>
+      <!-- CREATE ADMIN -->
+      
 
       <!-- INBOX -->
       <div class="box" id="inbox-content" style="display: none">
@@ -644,12 +700,12 @@
       // Show default tab (Dashboard Overview)
       document.getElementById("overview-content").style.display = "block";
 
-      document
-        .getElementById("logout-button")
-        .addEventListener("click", (e) => {
-          e.preventDefault();
-          alert("You have been logged out."); // Replace with real logout logic later
-        });
+      document.getElementById("logout-button").addEventListener("click", function(e) {
+    e.preventDefault();
+    if (confirm("Are you sure you want to logout?")) {
+      window.location.href = "../../login.php";
+    }
+  });
     </script>
 
     <script>
@@ -772,3 +828,5 @@
     </script>
   </body>
 </html>
+
+

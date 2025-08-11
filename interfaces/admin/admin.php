@@ -3,7 +3,7 @@ require '../connection.php';
 
 // Check if the user is logged in as admin
 if (!isset($_SESSION['username']) || !isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
-    header('Location: ../login.php');
+    header('Location: ../../login.php');
     exit();
     
     
@@ -24,7 +24,7 @@ if (!isset($_SESSION['username']) || !isset($_SESSION['role']) || $_SESSION['rol
     <h1>Welcome to the Admin Interface</h1>
     <p>Hello, <?php echo htmlspecialchars($_SESSION['username']); ?>!</p>
     <p>This is the admin dashboard where you can manage various aspects of the system.</p>
-    <a href="../login.php">Logout</a>
+    <a href="../../login.php">Logout</a>
 </body>
 </html>
 
